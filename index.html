@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- сори, тут много говнокода, я быстро делал и качество было не в приоритете -->
+    
+    <div class="left">
+        <video controls width="480" height="360">
+            <source src="assets/birthday.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="right">
+        <h1>С днём рождения, мой дорогой!</h1>
+        <p>Желаю чтобы было блин много тепла. Как во воспоминаниях, семье, так и в доме, в батареях.
+           <br><br>
+           Надеюсь, что age += 1 принесет тебе больше мудрости, а не стрельбы в спине.
+        </p>   
+        <section>
+            <button>
+                <img src="assets/anton.png" width="100">
+            </button>
+            <p style="display: inline-block;">Собрано уникальных тостов от дяди Антона:<br><span>0</span>/9</p>
+        </section>
+    </div>
+
+    <!-- это для конфетти -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <div class="final hidden">
+        <div class="final_back">
+        </div>
+        <h1 class="office-banner">
+            Классному парню в день рождения!
+        </h1>
+    </div>
+    <script src="scripts.js"></script>
+    </body>
+</html>

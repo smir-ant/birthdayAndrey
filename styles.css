@@ -1,0 +1,159 @@
+/* сори, тут много говнокода, я быстро делал и качество было не в приоритете */
+
+body {
+    margin: 0;
+    background-image: url("assets/back.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+div.left, div.right {
+    flex: 3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    flex: 4;
+}
+
+
+video {
+    height: 90vh;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.right > * {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    padding: 20px;
+    width: 80%;
+}
+
+p {
+    font-size: 25px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    /* height: 48px; */
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    margin-right: 15px;
+  }
+  
+  button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    box-shadow: 4px 4px 8px 1px rgba(131, 131, 146, 1) inset;
+
+    transform: translateY(2px);
+  }
+
+button:disabled {
+    filter: saturate(30%);
+    /* background-color: #a4a4a4; */
+    box-shadow: none;
+    cursor:default;
+}
+
+button:disabled:hover {
+    transform: translateY(0px);
+}
+
+article {
+    position: absolute;
+}
+
+.final {
+    .office-banner {
+        background-color: #e68d8d;
+        font-family: "Arial";
+        padding: 0.125em;
+        font-size: 4em;
+        text-align: center;
+        white-space: nowrap;
+        transform: rotate(-10deg);
+        position: fixed;
+        top: 40%;
+        left: -5%;
+        right: -5%;
+        z-index: 100;
+        margin-top: 0;
+      }
+} 
+
+.final_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba( 255, 255, 255, 0.85 );
+    transition: background-color 0.5s ease;
+}
+
+.hidden .final_back {
+    background-color: transparent;
+}
+
+
+.final {
+    opacity: 1;
+}
+
+.final.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
